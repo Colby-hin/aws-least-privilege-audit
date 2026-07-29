@@ -4,7 +4,6 @@ An automated review of AWS Identity and Access Management permissions, built to 
  
 I created a controlled AWS test environment with several IAM identities, each representing a different privilege scenario, then ran a Python and Boto3 analyzer against the account. The analyzer assigned a risk score to each IAM user and role and generated findings, recommendations, a JSON report, and a CSV summary.
  
-This project was completed as part of a GRC Engineering Club lab. The original instructional materials and source code are not included in this repository — what you'll find here is my implementation, testing process, results, and lessons learned.
  
 ---
  
