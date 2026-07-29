@@ -1,4 +1,4 @@
-# AWS Least Privilege Compliance Checker
+# AWS Least Privilege Audit
  
 An automated review of AWS Identity and Access Management permissions, built to identify administrative access, wildcard permissions, broad resource access, and other configurations that conflict with least privilege principles.
  
