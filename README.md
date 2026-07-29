@@ -184,7 +184,7 @@ This project demonstrated how Python and Boto3 can support repeatable IAM access
 
 ## Attribution
 
-This project was completed as part of a GRC Engineering Club lab.
+This project was completed as part of a GRC Engineering Club.
 
 The original instructional materials and source code are not included in this repository. This repository documents my implementation, testing process, findings, evidence, and lessons learned.
 
