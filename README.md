@@ -24,16 +24,6 @@ This project was completed as part of a GRC Engineering Club lab. The original i
 - Boto3
 - AWS Command Line Interface
 - jq
-## Repository Structure
- 
-```
-.
-├── README.md
-├── evidence/
-│   ├── privilege_compliance_report_20260728_205148_redacted.json
-│   └── privilege_compliance_summary_20260728_205148.csv
-└── screenshots/
-```
  
 ---
  
