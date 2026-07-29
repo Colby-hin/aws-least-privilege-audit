@@ -37,7 +37,6 @@ This project supports evidence collection for the following controls:
 | NIST SP 800-53 AC-6(1) | Access to security functions should be limited to authorized users. |
 | NIST SP 800-53 AC-6(2) | Users performing nonsecurity functions should operate without unnecessary security privileges. |
  
-The analyzer supports control reviews. It does not, by itself, prove that an organization is fully compliant.
  
 ---
  
