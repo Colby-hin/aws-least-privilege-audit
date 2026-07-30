@@ -1,5 +1,5 @@
 {
-  "account_id": "393036064603",
+  "account_id": "REDACTED_ACCOUNT_ID",
   "scan_timestamp": "2026-07-28T20:51:48.264993",
   "summary": {
     "total_entities": 6,
@@ -15,12 +15,12 @@
     {
       "type": "USER",
       "name": "grc-lab-auditor",
-      "arn": "arn:aws:iam::393036064603:user/grc-lab-auditor",
+      "arn": "arn:aws:iam::REDACTED_ACCOUNT_ID:user/grc-lab-auditor",
       "create_date": "2026-07-28 02:19:57+00:00",
       "attached_policies": [
         {
           "PolicyName": "GRCLabPrivilegeAudit",
-          "PolicyArn": "arn:aws:iam::393036064603:policy/GRCLabPrivilegeAudit"
+          "PolicyArn": "arn:aws:iam::REDACTED_ACCOUNT_ID:policy/GRCLabPrivilegeAudit"
         }
       ],
       "inline_policies": [],
@@ -33,7 +33,7 @@
     {
       "type": "USER",
       "name": "test-overprivileged",
-      "arn": "arn:aws:iam::393036064603:user/test-overprivileged",
+      "arn": "arn:aws:iam::REDACTED_ACCOUNT_ID:user/test-overprivileged",
       "create_date": "2026-07-28 03:11:22+00:00",
       "attached_policies": [
         {
@@ -55,7 +55,7 @@
     {
       "type": "USER",
       "name": "test-scoped",
-      "arn": "arn:aws:iam::393036064603:user/test-scoped",
+      "arn": "arn:aws:iam::REDACTED_ACCOUNT_ID:user/test-scoped",
       "create_date": "2026-07-28 03:19:18+00:00",
       "attached_policies": [],
       "inline_policies": [
@@ -86,7 +86,7 @@
     {
       "type": "ROLE",
       "name": "AWSServiceRoleForSupport",
-      "arn": "arn:aws:iam::393036064603:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
+      "arn": "arn:aws:iam::REDACTED_ACCOUNT_ID:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
       "create_date": "2026-07-28 01:46:47+00:00",
       "attached_policies": [
         {
@@ -115,7 +115,7 @@
     {
       "type": "ROLE",
       "name": "AWSServiceRoleForTrustedAdvisor",
-      "arn": "arn:aws:iam::393036064603:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+      "arn": "arn:aws:iam::REDACTED_ACCOUNT_ID:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
       "create_date": "2026-07-28 01:46:47+00:00",
       "attached_policies": [
         {
@@ -144,7 +144,7 @@
     {
       "type": "ROLE",
       "name": "test-wildcard-role",
-      "arn": "arn:aws:iam::393036064603:role/test-wildcard-role",
+      "arn": "arn:aws:iam::REDACTED_ACCOUNT_ID:role/test-wildcard-role",
       "create_date": "2026-07-28 03:39:44+00:00",
       "attached_policies": [],
       "inline_policies": [
@@ -168,7 +168,7 @@
           {
             "Effect": "Allow",
             "Principal": {
-              "AWS": "arn:aws:iam::393036064603:root"
+              "AWS": "arn:aws:iam::REDACTED_ACCOUNT_ID:root"
             },
             "Action": "sts:AssumeRole",
             "Condition": {}
