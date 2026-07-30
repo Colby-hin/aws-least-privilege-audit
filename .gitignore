@@ -1,0 +1,5 @@
+privilege-lab-env/
+__pycache__/
+*.pyc
+.env
+.aws/

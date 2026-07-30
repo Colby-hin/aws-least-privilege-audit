@@ -1,0 +1,7 @@
+Type,Name,Risk Level,Risk Score,Attached Policies,Inline Policies,Key Findings,Recommendations
+USER,grc-lab-auditor,LOW,0,1,0,,
+USER,test-overprivileged,HIGH,50,1,0,Has administrative policy: AdministratorAccess,Review necessity of administrative access
+USER,test-scoped,LOW,15,0,1,Allows access to all resources,Restrict resource access to specific ARNs
+ROLE,AWSServiceRoleForSupport,LOW,0,1,0,,
+ROLE,AWSServiceRoleForTrustedAdvisor,LOW,0,1,0,,
+ROLE,test-wildcard-role,HIGH,45,0,1,Contains wildcard permissions; Allows access to all resources,Replace wildcards with specific permissions; Restrict resource access to specific ARNs

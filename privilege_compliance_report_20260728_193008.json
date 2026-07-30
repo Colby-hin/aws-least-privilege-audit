@@ -1,0 +1,195 @@
+{
+  "account_id": "393036064603",
+  "scan_timestamp": "2026-07-28T19:30:08.114911",
+  "summary": {
+    "total_entities": 6,
+    "users": 3,
+    "roles": 3,
+    "critical_risk": 0,
+    "high_risk": 2,
+    "medium_risk": 0,
+    "low_risk": 4,
+    "admin_policies_count": 1
+  },
+  "entities": [
+    {
+      "type": "USER",
+      "name": "grc-lab-auditor",
+      "arn": "arn:aws:iam::393036064603:user/grc-lab-auditor",
+      "create_date": "2026-07-28 02:19:57+00:00",
+      "attached_policies": [
+        {
+          "PolicyName": "GRCLabPrivilegeAudit",
+          "PolicyArn": "arn:aws:iam::393036064603:policy/GRCLabPrivilegeAudit"
+        }
+      ],
+      "inline_policies": [],
+      "groups": [],
+      "risk_score": 0,
+      "findings": [],
+      "recommendations": [],
+      "risk_level": "LOW"
+    },
+    {
+      "type": "USER",
+      "name": "test-overprivileged",
+      "arn": "arn:aws:iam::393036064603:user/test-overprivileged",
+      "create_date": "2026-07-28 03:11:22+00:00",
+      "attached_policies": [
+        {
+          "PolicyName": "AdministratorAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+        }
+      ],
+      "inline_policies": [],
+      "groups": [],
+      "risk_score": 50,
+      "findings": [
+        "Has administrative policy: AdministratorAccess"
+      ],
+      "recommendations": [
+        "Review necessity of administrative access"
+      ],
+      "risk_level": "HIGH"
+    },
+    {
+      "type": "USER",
+      "name": "test-scoped",
+      "arn": "arn:aws:iam::393036064603:user/test-scoped",
+      "create_date": "2026-07-28 03:19:18+00:00",
+      "attached_policies": [],
+      "inline_policies": [
+        {
+          "PolicyName": "scoped-s3-read",
+          "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Effect": "Allow",
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::example-bucket/*"
+              }
+            ]
+          }
+        }
+      ],
+      "groups": [],
+      "risk_score": 15,
+      "findings": [
+        "Allows access to all resources"
+      ],
+      "recommendations": [
+        "Restrict resource access to specific ARNs"
+      ],
+      "risk_level": "LOW"
+    },
+    {
+      "type": "ROLE",
+      "name": "AWSServiceRoleForSupport",
+      "arn": "arn:aws:iam::393036064603:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
+      "create_date": "2026-07-28 01:46:47+00:00",
+      "attached_policies": [
+        {
+          "PolicyName": "AWSSupportServiceRolePolicy",
+          "PolicyArn": "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy"
+        }
+      ],
+      "inline_policies": [],
+      "trust_policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": {
+              "Service": "support.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+          }
+        ]
+      },
+      "risk_score": 0,
+      "findings": [],
+      "recommendations": [],
+      "risk_level": "LOW"
+    },
+    {
+      "type": "ROLE",
+      "name": "AWSServiceRoleForTrustedAdvisor",
+      "arn": "arn:aws:iam::393036064603:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+      "create_date": "2026-07-28 01:46:47+00:00",
+      "attached_policies": [
+        {
+          "PolicyName": "AWSTrustedAdvisorServiceRolePolicy",
+          "PolicyArn": "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy"
+        }
+      ],
+      "inline_policies": [],
+      "trust_policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": {
+              "Service": "trustedadvisor.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+          }
+        ]
+      },
+      "risk_score": 0,
+      "findings": [],
+      "recommendations": [],
+      "risk_level": "LOW"
+    },
+    {
+      "type": "ROLE",
+      "name": "test-wildcard-role",
+      "arn": "arn:aws:iam::393036064603:role/test-wildcard-role",
+      "create_date": "2026-07-28 03:39:44+00:00",
+      "attached_policies": [],
+      "inline_policies": [
+        {
+          "PolicyName": "wildcard-everything",
+          "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Effect": "Allow",
+                "Action": "*",
+                "Resource": "*"
+              }
+            ]
+          }
+        }
+      ],
+      "trust_policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": {
+              "AWS": "arn:aws:iam::393036064603:root"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+          }
+        ]
+      },
+      "risk_score": 45,
+      "findings": [
+        "Contains wildcard permissions",
+        "Allows access to all resources"
+      ],
+      "recommendations": [
+        "Replace wildcards with specific permissions",
+        "Restrict resource access to specific ARNs"
+      ],
+      "risk_level": "HIGH"
+    }
+  ],
+  "recommendations": [
+    "Review 2 entities with high-risk configurations",
+    "Audit 1 administrative policy assignments"
+  ],
+  "executive_summary": "Privilege compliance assessment: 66.7% of entities follow least privilege principles. 2 entities have high-risk privilege configurations."
+}
